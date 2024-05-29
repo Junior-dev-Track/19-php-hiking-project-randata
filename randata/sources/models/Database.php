@@ -1,11 +1,14 @@
 <?php
 
+namespace models;
+
 use PDO;
 use PDOException;
 
 class Database
 {
     public string $host = "188.166.24.55";
+    //public string $host = DATA_HOST;
     public string $name = "hamilton-9-randata";
     public string $data;
     public string $login = "hamilton-9-randata";
@@ -20,7 +23,6 @@ class Database
         try {
             $this->PDO = new PDO($this->data, $this->login, $this->password);
             $this->PDO->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "<h2>Connexion réussie à la base de données !</h2>";
         } catch (PDOException $error) {
             die("<h1>Erreur ! Impossible de se connecter à la base de données: </h1>" . $error->getMessage());
         }
