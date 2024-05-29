@@ -1,8 +1,8 @@
 <?php
 require_once "./vendor/autoload.php";
-// require_once './sources/models/Database.php';
+require_once './sources/models/Database.php';
 
-use App\models\Database;
+// use App\models\Database;
 
 $data = new Database();
 $data->get_all_hikes();
