@@ -8,7 +8,6 @@ use PDOException;
 class Database
 {
     public string $host = "188.166.24.55";
-    //public string $host = DATA_HOST;
     public string $name = "hamilton-9-randata";
     public string $data;
     public string $login = "hamilton-9-randata";
